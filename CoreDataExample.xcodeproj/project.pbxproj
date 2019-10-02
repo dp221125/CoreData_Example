@@ -13,6 +13,8 @@
 		C310E5CC23442D5700FF278D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C310E5CA23442D5700FF278D /* Main.storyboard */; };
 		C310E5CE23442D5800FF278D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C310E5CD23442D5800FF278D /* Assets.xcassets */; };
 		C310E5D123442D5800FF278D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C310E5CF23442D5800FF278D /* LaunchScreen.storyboard */; };
+		C310E5DB23442E4E00FF278D /* CoreDataExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C310E5D923442E4E00FF278D /* CoreDataExample.xcdatamodeld */; };
+		C310E5DD2344315A00FF278D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310E5DC2344315A00FF278D /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		C310E5CD23442D5800FF278D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C310E5D023442D5800FF278D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C310E5D223442D5800FF278D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C310E5D823442D5F00FF278D /* CoreDataExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoreDataExample.entitlements; sourceTree = "<group>"; };
+		C310E5DA23442E4E00FF278D /* CoreDataExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataExample.xcdatamodel; sourceTree = "<group>"; };
+		C310E5DC2344315A00FF278D /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 		C310E5C323442D5700FF278D /* CoreDataExample */ = {
 			isa = PBXGroup;
 			children = (
+				C310E5D823442D5F00FF278D /* CoreDataExample.entitlements */,
 				C310E5C423442D5700FF278D /* AppDelegate.swift */,
 				C310E5C623442D5700FF278D /* SceneDelegate.swift */,
 				C310E5C823442D5700FF278D /* ViewController.swift */,
@@ -63,6 +69,8 @@
 				C310E5CD23442D5800FF278D /* Assets.xcassets */,
 				C310E5CF23442D5800FF278D /* LaunchScreen.storyboard */,
 				C310E5D223442D5800FF278D /* Info.plist */,
+				C310E5D923442E4E00FF278D /* CoreDataExample.xcdatamodeld */,
+				C310E5DC2344315A00FF278D /* CoreDataStack.swift */,
 			);
 			path = CoreDataExample;
 			sourceTree = "<group>";
@@ -138,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C310E5DD2344315A00FF278D /* CoreDataStack.swift in Sources */,
 				C310E5C923442D5700FF278D /* ViewController.swift in Sources */,
 				C310E5C523442D5700FF278D /* AppDelegate.swift in Sources */,
 				C310E5C723442D5700FF278D /* SceneDelegate.swift in Sources */,
+				C310E5DB23442E4E00FF278D /* CoreDataExample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,15 +294,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CoreDataExample/CoreDataExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 5BY5MQ6875;
 				INFOPLIST_FILE = CoreDataExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.seokho.CoreDataExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,15 +316,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CoreDataExample/CoreDataExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 5BY5MQ6875;
 				INFOPLIST_FILE = CoreDataExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.seokho.CoreDataExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +356,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C310E5D923442E4E00FF278D /* CoreDataExample.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C310E5DA23442E4E00FF278D /* CoreDataExample.xcdatamodel */,
+			);
+			currentVersion = C310E5DA23442E4E00FF278D /* CoreDataExample.xcdatamodel */;
+			path = CoreDataExample.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C310E5B923442D5700FF278D /* Project object */;
 }
